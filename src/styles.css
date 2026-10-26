@@ -104,3 +104,25 @@ summary:focus-visible { outline: 3px solid var(--copper); outline-offset: 3px; }
 .hero .org { margin-top: 1.25rem; }
 .edu { display: grid; gap: 1.25rem; }
 .edu h3 { margin: .1rem 0; }
+
+/* Mobile */
+html { -webkit-text-size-adjust: 100%; }
+main { overflow-wrap: break-word; }
+@media (max-width: 720px) {
+  html { scroll-padding-top: 1rem; }
+  .top { position: static; flex-direction: column; align-items: flex-start; gap: .25rem; padding: .75rem 1rem 0; }
+  .top nav { width: 100%; flex-wrap: nowrap; gap: 0; overflow-x: auto; scrollbar-width: none; }
+  .top nav::-webkit-scrollbar { display: none; }
+  .top nav a { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding-right: 1.1rem; white-space: nowrap; }
+  main, .foot { padding-left: 1rem; padding-right: 1rem; }
+  .hero { padding: 1.75rem 0 2rem; }
+  .chip-body { padding: 1.5rem 1.25rem; }
+  .intro { margin-top: 1.5rem; font-size: 1.1rem; }
+  .cta .btn { flex: 1 1 100%; text-align: center; padding: .8rem 1rem; }
+  .section { padding: 1.75rem 0; }
+  .timeline { padding-left: 1rem; gap: 1.5rem; }
+  summary { display: flex; align-items: center; min-height: 44px; }
+  details { padding-left: .75rem; }
+  .big { font-size: 1.1rem; overflow-wrap: anywhere; }
+  .contact a, .section-body a { overflow-wrap: anywhere; }
+}

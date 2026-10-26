@@ -76,6 +76,7 @@ export default function App() {
           <a href="#experience">Expérience</a>
           <a href="#competences">Compétences</a>
           <a href="#formation">Formation</a>
+          <a href="#publication">Publication</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -117,6 +118,8 @@ export default function App() {
               </div>
             ))}
           </dl>
+          <p className="gap"><strong>Certifications :</strong> {certs.join(" ; ")}.</p>
+          <p><strong>Langues :</strong> {languages}</p>
         </Section>
 
         <Section id="formation" title="Formation">
@@ -129,12 +132,12 @@ export default function App() {
               </li>
             ))}
           </ul>
-          <p className="gap">Certifications : {certs.join(" ; ")}.</p>
-          <p>Langues : {languages}</p>
-          <h3 className="gap">Publication</h3>
-          <p>{publication.title}</p>
+        </Section>
+
+        <Section id="publication" title="Publication">
+          <h3>{publication.title}</h3>
           <p className="org">{publication.venue}, {publication.year}</p>
-          <p><a href={publication.link} target="_blank" rel="noreferrer">Lire l'article sur HAL</a></p>
+          <p className="gap"><a href={publication.link} target="_blank" rel="noreferrer">Lire l'article sur HAL</a></p>
         </Section>
 
         <Section id="contact" title="Contact">

@@ -1,15 +1,14 @@
-// Tout le contenu du site est ici : modifie ce fichier, le reste suit.
 
 export const profile = {
   name: "Oussama Riahi",
-  title: "Ingénieur systèmes embarqués",
+  title: "Ingénieur Systèmes Embarqués",
   intro:
     "Je développe en C/C++ pour Linux embarqué, de l'interfaçage matériel (RS-232, CAN, I2C) à la vision et à l'IA sur cible contrainte. Avant mon Master, plus de 4 ans en production automobile m'ont appris à diagnostiquer, documenter et livrer sous contrainte.",
   location: "Clermont-Ferrand, France",
   availability: "Disponible immédiatement",
   email: "riahi_oussema@outlook.fr",
   linkedin: "https://www.linkedin.com/in/oussama-riahi/",
-  github: "https://github.com/TON-PSEUDO", // à remplacer
+  github: "https://github.com/ouriahi", // à remplacer
 };
 
 export const pinsLeft = ["C / C++", "Linux embarqué", "Yocto / Buildroot", "CMake"];
