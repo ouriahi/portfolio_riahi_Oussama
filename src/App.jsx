@@ -1,5 +1,5 @@
 import {
-  profile, pinsLeft, pinsRight, projects, experience, skills, publication, education,
+  profile, pinsLeft, pinsRight, projects, experience, skills, publication, education, certs, languages,
 } from "./data.js";
 
 function Section({ id, title, children }) {
@@ -33,6 +33,39 @@ function Chip() {
   );
 }
 
+function List({ label, items }) {
+  if (!items?.length) return null;
+  return (
+    <div className="detail-block">
+      <h4>{label}</h4>
+      <ul>{items.map((x) => <li key={x}>{x}</li>)}</ul>
+    </div>
+  );
+}
+
+function Project({ p }) {
+  const hasDetail = p.goal || p.done || p.results;
+  return (
+    <li>
+      <p className="context">{p.context}</p>
+      <h3>{p.title}</h3>
+      <p>{p.summary}</p>
+      <ul className="tags">{p.stack.map((t) => <li key={t}>{t}</li>)}</ul>
+      {hasDetail && (
+        <details>
+          <summary>Voir le détail</summary>
+          {p.goal && <div className="detail-block"><h4>Objectif</h4><p>{p.goal}</p></div>}
+          <List label="Réalisations" items={p.done} />
+          <List label="Résultats" items={p.results} />
+          {p.link && (
+            <p><a href={p.link} target="_blank" rel="noreferrer">{p.linkLabel || "Voir le projet"}</a></p>
+          )}
+        </details>
+      )}
+    </li>
+  );
+}
+
 export default function App() {
   return (
     <>
@@ -42,6 +75,7 @@ export default function App() {
           <a href="#projets">Projets</a>
           <a href="#experience">Expérience</a>
           <a href="#competences">Compétences</a>
+          <a href="#formation">Formation</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -54,19 +88,11 @@ export default function App() {
             <a className="btn" href="#projets">Voir mes projets</a>
             <a className="btn ghost" href={`mailto:${profile.email}`}>M'écrire</a>
           </p>
+          <p className="org">{profile.location}. {profile.availability}.</p>
         </section>
 
         <Section id="projets" title="Projets">
-          <ul className="projects">
-            {projects.map((p) => (
-              <li key={p.title}>
-                <p className="context">{p.context}</p>
-                <h3>{p.link ? <a href={p.link} target="_blank" rel="noreferrer">{p.title}</a> : p.title}</h3>
-                <p>{p.desc}</p>
-                <ul className="tags">{p.tags.map((t) => <li key={t}>{t}</li>)}</ul>
-              </li>
-            ))}
-          </ul>
+          <ul className="projects">{projects.map((p) => <Project key={p.title} p={p} />)}</ul>
         </Section>
 
         <Section id="experience" title="Expérience">
@@ -75,7 +101,7 @@ export default function App() {
               <li key={e.role}>
                 <p className="context">{e.period}</p>
                 <h3>{e.role}</h3>
-                <p className="org">{e.org}</p>
+                <p className="org">{e.org}. {e.meta}.</p>
                 <ul>{e.points.map((x) => <li key={x}>{x}</li>)}</ul>
               </li>
             ))}
@@ -93,11 +119,20 @@ export default function App() {
           </dl>
         </Section>
 
-        <Section id="formation" title="Formation et publication">
-          <h3>{education.title}</h3>
-          <p className="org">{education.org}. {education.note}</p>
-          <p>{education.certs.join(" ; ")}.</p>
-          <h3 className="gap">{publication.title}</h3>
+        <Section id="formation" title="Formation">
+          <ul className="edu">
+            {education.map((e) => (
+              <li key={e.title}>
+                <p className="context">{e.year}</p>
+                <h3>{e.title}</h3>
+                <p className="org">{e.org}. {e.note}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="gap">Certifications : {certs.join(" ; ")}.</p>
+          <p>Langues : {languages}</p>
+          <h3 className="gap">Publication</h3>
+          <p>{publication.title}</p>
           <p className="org">{publication.venue}, {publication.year}</p>
           <p><a href={publication.link} target="_blank" rel="noreferrer">Lire l'article sur HAL</a></p>
         </Section>
@@ -109,7 +144,7 @@ export default function App() {
             {" · "}
             <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
           </p>
-          <p className="org">{profile.location}. Permis B.</p>
+          <p className="org">{profile.location}. Permis B. {profile.availability}.</p>
         </Section>
       </main>
 

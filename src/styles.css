@@ -92,3 +92,15 @@ h3 { font-size: 1.15rem; line-height: 1.3; font-weight: 700; }
   html { scroll-behavior: auto; }
   .pins li { animation: none; }
 }
+
+/* Détails de projet (ouverts par le visiteur) */
+details { margin-top: 1rem; border-left: 2px solid var(--line); padding-left: 1rem; }
+summary { cursor: pointer; font-weight: 500; color: var(--board); }
+summary:focus-visible { outline: 3px solid var(--copper); outline-offset: 3px; }
+.detail-block { margin-top: 1rem; }
+.detail-block h4 { margin: 0 0 .3rem; font-size: .95rem; color: var(--copper); }
+.detail-block ul { display: grid; gap: .3rem; }
+.detail-block li::before { content: "– "; color: var(--copper); }
+.hero .org { margin-top: 1.25rem; }
+.edu { display: grid; gap: 1.25rem; }
+.edu h3 { margin: .1rem 0; }
