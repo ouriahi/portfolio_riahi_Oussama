@@ -69,15 +69,15 @@ export const content = {
       photo: "/images/photo-oussama.jpg", // Optionnel : affiche un avatar pro si absent
     },
     about: {
-      headline: "De la ligne de production automobile à l'architecture de systèmes embarqués",
+      headline: "De la ligne de production industrielle à l'architecture de systèmes embarqués et de l'IA",
       paragraphs: [
-        "Mon parcours n'est pas linéaire, et c'est ma plus grande force sur un banc d'intégration. J'ai commencé sur le terrain, dans l'industrie électronique et automobile (Amphenol, Marquardt), où j'ai dirigé des équipes techniques et maintenu des équipements critiques à forts volumes pendant plus de 4 ans.",
-        "Sur une ligne de production, un bug matériel ou logiciel coûte immédiatement des milliers d'euros par heure d'arrêt. C'est là que j'ai forgé ma méthode : isoler les pannes à la racine (oscilloscope, trames séries, logs noyau), documenter rigoureusement et concevoir des systèmes robustes.",
-        "En 2023, j'ai repris mes études en France à l'Université Clermont Auvergne (1er de promotion en Licence, 2e en Master Systèmes Embarqués). Aujourd'hui, je combine cette pragmatique industrielle avec une maîtrise académique et R&D pointue en C/C++ moderne, Linux embarqué, FPGA et Edge AI."
+        "Mon parcours associe 4 ans d'expérience concrète sur le terrain dans l'industrie automobile et de production (Amphenol, Marquardt) à 1 année dédiée au développement logiciel avancé et à l'intelligence artificielle.",
+        "Sur les lignes de production, piloter des équipements critiques et encadrer des équipes techniques m'a appris la rigueur absolue face aux pannes, le diagnostic bas niveau et l'exigence de la livraison sans faille sous contrainte de temps.",
+        "En consolidant cette base par un Master en Systèmes Embarqués (Université Clermont Auvergne), j'ai mis cette expertise au service du développement logiciel : conception de serveurs embarqués C++/Qt (GigE Vision) et recherche en IA distribuée (NeuPIS). Aujourd'hui, je fais le pont entre la robustesse industrielle et l'innovation en R&D embarquée."
       ],
       highlights: [
-        { value: "4+ ans", label: "Expérience industrielle terrain" },
-        { value: "Top 2", label: "Classement Master & Major Licence" },
+        { value: "4 ans", label: "Expérience industrielle terrain" },
+        { value: "1 an", label: "Dev logiciel, embarqué & IA" },
         { value: "1", label: "Publication scientifique (HAL)" },
       ]
     },
@@ -421,15 +421,15 @@ export const content = {
       photo: "/images/photo-oussama.jpg",
     },
     about: {
-      headline: "From high-volume automotive production lines to embedded systems architecture",
+      headline: "From high-volume industrial manufacturing to embedded software and AI development",
       paragraphs: [
-        "My career path combines hands-on industrial pragmatism with advanced academic research. I started in the field in the automotive electronics industry (Amphenol, Marquardt), leading technical teams and maintaining high-volume production equipment for over 4 years.",
-        "On a manufacturing line, a hardware or software failure immediately costs thousands of euros per hour of downtime. That environment shaped my engineering mindset: root-cause hardware/software debugging, clear documentation, and rock-solid reliability.",
-        "In 2023, I resumed my academic studies in France at Université Clermont Auvergne (graduating top of my Bachelor's class and 2nd in my Embedded Systems Master's). Today, I bridge low-level C/C++ embedded development, Linux, FPGA, and distributed Edge AI."
+        "My background combines 4 years of hands-on industrial and automotive manufacturing experience (Amphenol, Marquardt) with 1 dedicated year in advanced software and artificial intelligence development.",
+        "Managing critical production lines and leading technical teams taught me absolute rigor under pressure, low-level root-cause troubleshooting, and the importance of flawless delivery under tight operational constraints.",
+        "By channeling this industrial foundation into a Master's degree in Embedded Systems (Université Clermont Auvergne), I transitioned into high-performance software engineering—architecting C++/Qt embedded servers (GigE Vision) and conducting distributed AI research (NeuPIS). Today, I bridge industrial-grade reliability with cutting-edge embedded R&D."
       ],
       highlights: [
-        { value: "4+ yrs", label: "Hands-on industrial experience" },
-        { value: "Top 2", label: "Master's rank & B.Sc. Valedictorian" },
+        { value: "4 yrs", label: "Hands-on industrial experience" },
+        { value: "1 yr", label: "Software, Embedded & AI dev" },
         { value: "1", label: "Published research paper (HAL)" },
       ]
     },
